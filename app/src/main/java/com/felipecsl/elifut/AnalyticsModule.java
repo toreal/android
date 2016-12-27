@@ -21,6 +21,8 @@ public class AnalyticsModule {
   @Provides @Singleton public Tracker getDefaultTracker() {
     GoogleAnalytics analytics = GoogleAnalytics.getInstance(context);
     // To enable debug logging use: adb shell setprop log.tag.GAv4 DEBUG
+    //  for test 
+
     return analytics.newTracker(R.xml.global_tracker);
   }
 }
